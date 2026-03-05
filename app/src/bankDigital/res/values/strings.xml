@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NexusPay</string>
+    <string name="account_type_label">Conta Digital</string>
+    <string name="flavor_tagline">Sua conta digital sem tarifas</string>
+</resources>

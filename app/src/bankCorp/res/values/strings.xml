@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NexusBank</string>
+    <string name="account_type_label">Conta Corrente</string>
+    <string name="flavor_tagline">Sua conta corrente completa</string>
+</resources>
