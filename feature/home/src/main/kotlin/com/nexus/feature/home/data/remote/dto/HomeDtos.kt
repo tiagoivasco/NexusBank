@@ -1,21 +1,24 @@
 package com.nexus.feature.home.data.remote.dto
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class AccountDto(
-    @SerializedName("id") val id: String,
-    @SerializedName("owner_name") val ownerName: String,
-    @SerializedName("account_number") val accountNumber: String,
-    @SerializedName("agency") val agency: String,
-    @SerializedName("balance") val balance: Double,
-    @SerializedName("account_type") val accountType: String
+    @SerialName("id") val id: String,
+    @SerialName("owner_name") val ownerName: String,
+    @SerialName("account_number") val accountNumber: String,
+    @SerialName("agency") val agency: String,
+    @SerialName("balance") val balance: Double,
+    @SerialName("account_type") val accountType: String
 )
 
+@Serializable
 data class TransactionDto(
-    @SerializedName("id") val id: String,
-    @SerializedName("description") val description: String,
-    @SerializedName("amount") val amount: Double,
-    @SerializedName("type") val type: String,
-    @SerializedName("category") val category: String,
-    @SerializedName("date_time") val dateTime: String
+    @SerialName("id") val id: String,
+    @SerialName("description") val description: String,
+    @SerialName("amount") val amount: Double,
+    @SerialName("type") val type: String,
+    @SerialName("category") val category: String,
+    @SerialName("date_time") val dateTime: String
 )

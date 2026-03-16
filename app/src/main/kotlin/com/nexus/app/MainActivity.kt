@@ -4,10 +4,15 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.ui.Modifier
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 import com.nexus.core.ui.theme.NexusTheme
 import com.nexus.feature.home.presentation.HomeScreen
+import kotlinx.serialization.Serializable
+
+@Serializable
+object HomeRoute
 
 class MainActivity : ComponentActivity() {
 
@@ -16,7 +21,16 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             NexusTheme {
-                HomeScreen()
+                val navController = rememberNavController()
+
+                NavHost(
+                    navController = navController,
+                    startDestination = HomeRoute
+                ) {
+                    composable<HomeRoute> {
+                        HomeScreen()
+                    }
+                }
             }
         }
     }
